@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 600 1.6rem 'Poppins', sans-serif;
+}
+
+.shell {
+  max-width: calc(113.4rem + 1.5rem * 2);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
