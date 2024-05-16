@@ -4,7 +4,7 @@ import Header from './../header/Header'
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <section className='hero'>
       <Header />
 
       <figure className='hero-image'>
@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
