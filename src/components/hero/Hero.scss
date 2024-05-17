@@ -33,25 +33,6 @@
                 letter-spacing: .03rem;
                 margin-bottom: 2rem;
             }
-
-            a {
-                color: #fff;
-                text-align: center;
-                display: block;
-                text-decoration: none;
-                text-transform: uppercase;
-                background-color: #1744E8;
-                border: .2rem solid #1744E8;
-                border-radius: 4rem;
-                max-width: 14rem;
-                padding: 1rem 0;
-                transition: color .3s, background-color 1s;
-            
-                &:hover {
-                    color: #1744E8;
-                    background: transparent;
-                }
-            }
         }
     }
 
