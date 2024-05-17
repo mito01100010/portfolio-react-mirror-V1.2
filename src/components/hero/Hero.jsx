@@ -4,7 +4,7 @@ import Header from './../header/Header'
 
 const Hero = () => {
   return (
-    <section className='hero'>
+    <section id='home' className='hero'>
       <Header />
 
       <figure className='hero-image'>
@@ -21,7 +21,7 @@ const Hero = () => {
               I'm into Web Development
             </h2>
 
-            <a href='#about'>About me</a>
+            <a href='#about' className='btn'>About me</a>
           </div>
         </div>
       </div>
