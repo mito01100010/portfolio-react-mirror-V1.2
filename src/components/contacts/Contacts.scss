@@ -1,0 +1,47 @@
+.contacts {
+    display: flex;
+    background-color: #e4e4e4;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1.4rem;
+    }
+
+    .contacts-inner {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        a {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            color: #3554aa;
+
+            i {
+                font-size: 2rem;
+            }
+
+            span {
+                position: relative;
+            }
+
+            span:after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                transform: scaleX(0);
+                transition: transform .5s;
+                height: .2rem;
+                background-color: #3554aa;
+            }
+
+            span:hover:after {
+                transform: none;
+            }
+
+        }
+    }
+}
