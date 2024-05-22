@@ -12,11 +12,11 @@ const Contacts = () => {
                         <span>Linkedin</span>
                     </a>
                     <a href='https://github.com/mito01100010' target='_blank'>
-                        <i class='fab fa-github'></i>
+                        <i className='fab fa-github'></i>
                         <span>Github</span>
                     </a>
                     <a href='mailto:mito0110010@gmail.com' target='_blank'>
-                        <i class='fas fa-envelope'></i>
+                        <i className='fas fa-envelope'></i>
                         <span>Email</span>
                     </a>
                 </div>
