@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .header {
     z-index: 9;
     position: fixed;
@@ -8,42 +10,129 @@
     background-color: rgba(255, 255, 255, .6);
     box-shadow: .1rem .1rem .8rem .1rem #000;
 
-    nav {
+    @include tablet {
+        padding: 2rem 0;
+    }
+
+    .header-inner {
         display: flex;
         justify-content: end;
 
-        ul {
-            li {
-                display: inline-block;
-            }
+        nav {
+            transition: left .8s;
 
-            li+li {
-                margin-left: 4rem;
-            }
-
-            a {
-                text-transform: uppercase;
-                position: relative;
-            }
-
-            a:after { 
-                content: '';
-                height: .1rem;
-                background-color: #000;
+            @include tablet {
+                text-align: center;
                 position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                border-radius: 4rem;
-                transform: scaleX(0);
-                transition: transform .4s;
-                transform-origin: 100% 0;
+                top: 100%;
+                left: -100%;
+                flex-direction: column;
+                justify-content: start;
+                width: 100%;
+                height: 100svh;
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, .9), rgba(255, 255, 255, .95), rgba(255, 255, 255, 1));
+                padding-top: 6rem;
             }
-        
-            a:hover:after {
-                transform: none;
-                transform-origin: 0 0;
+
+            ul {
+                li {
+                    display: inline-block;
+
+                    @include tablet {
+                        display: block;
+                    }
+                }
+
+                li+li {
+                    margin-left: 4rem;
+
+                    @include tablet {
+                        margin: unset;
+                        margin-top: 4rem;
+                    }
+                }
+
+                a {
+                    text-transform: uppercase;
+                    position: relative;
+                }
+
+                a:after {
+                    content: '';
+                    height: .1rem;
+                    background-color: #000;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-radius: 4rem;
+                    transform: scaleX(0);
+                    transition: transform .4s;
+                    transform-origin: 100% 0;
+                }
+
+                a:hover:after {
+                    transform: none;
+                    transform-origin: 0 0;
+                }
+            }
+        }
+
+        nav.show {
+            left: 0;
+        }
+
+        .menu-btn {
+            @include tablet {
+                position: relative;
+                width: 3.8rem;
+                height: 3rem;
+                margin: 0 4rem;
+
+                span {
+                    position: absolute;
+                    height: .4rem;
+                    width: 100%;
+                    background-color: #000;
+                    border-radius: .3rem;
+                    transition: .3s ease-in-out;
+
+                    &:nth-child(1) {
+                        top: 0;
+                    }
+
+                    &:nth-child(2) {
+                        bottom: 50%;
+                        transform: translateY(50%);
+                    }
+
+                    &:nth-child(3) {
+                        bottom: 0;
+                    }
+                }
+
+                &.show span:nth-child(1) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                &.show span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &.show span:nth-child(3) {
+                    bottom: unset;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
             }
         }
     }
+}
+
+/* When this class is toggled to the body, it stops the scrolling 
+behavior, so when using the mobile menu you can't scroll in the background. */
+.hidden-overflow {
+    overflow: hidden;
+    height: 100vh;
 }

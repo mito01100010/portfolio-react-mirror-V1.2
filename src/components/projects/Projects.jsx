@@ -30,20 +30,18 @@ const projects = [
 
 const Single = ({ item }) => {
     return (
-        <section>
-            <div className='project'>
-                <div className='shell'>
-                    <div className='project-inner' style={{ flexDirection: item.id % 2 === 0 ? 'row-reverse' : 'row' }} >
-                        <div className='project-image'>
-                            <img src={item.img} alt='' />
-                        </div>
-                        <div className='project-text' >
-                            <h2>{item.title}</h2>
-                            <p>{item.desc}</p>
-                            <div className='actions'>
-                                {item.sourceCode && <a href={item.sourceCode} target="_blank" className='btn'>Source code</a>}
-                                {item.liveURL && <a href={item.liveURL} target="_blank" className='btn'>Live URL</a>}
-                            </div>
+        <section className='project'>
+            <div className='shell'>
+                <div className='project-inner' >
+                    <div className='project-image'>
+                        <img src={item.img} alt='' />
+                    </div>
+                    <div className={`project-text ${item.id % 2 === 0 ? 'project-text-ordering' : ''}`}>
+                        <h2>{item.title}</h2>
+                        <p>{item.desc}</p>
+                        <div className='actions'>
+                            {item.sourceCode && <a href={item.sourceCode} target="_blank" className='btn'>Source code</a>}
+                            {item.liveURL && <a href={item.liveURL} target="_blank" className='btn'>Live URL</a>}
                         </div>
                     </div>
                 </div>

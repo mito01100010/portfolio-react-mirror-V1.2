@@ -1,10 +1,19 @@
+@import '../../App.scss';
+
 .skills {
     display: flex;
 
     .skills-inner {
         display: flex;
+        gap: 2rem;
 
-        h4{
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h4 {
+            font-size: 2rem;
             text-align: center;
             margin-bottom: 3rem;
             color: #1d1d1d;
@@ -15,12 +24,20 @@
             flex-wrap: wrap;
             display: flex;
 
+            @include tablet {
+                justify-content: center;
+            }
+
             figure {
                 position: relative;
                 width: 5rem;
                 height: 5rem;
                 margin: 0 4rem 6rem 4rem;
                 transition: all ease .3s;
+
+                @include mobile {
+                    margin: 0 2rem 4rem 2rem;
+                }
 
                 &:hover span {
                     bottom: -2rem;
@@ -48,6 +65,10 @@
 
         .certificates {
             max-width: 30rem;
+
+            @include tablet {
+                max-width: unset;
+            }
 
             a {
                 display: flex;

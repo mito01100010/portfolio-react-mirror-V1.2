@@ -1,6 +1,12 @@
+@import '../../App.scss';
+
 .contacts {
     display: flex;
     background-color: #e4e4e4;
+
+    @include tablet {
+        height: 100vh;
+    }
 
     h2 {
         text-align: center;

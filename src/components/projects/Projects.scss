@@ -1,5 +1,11 @@
+@import '../../App.scss'; 
+
 .projects {
     position: relative;
+
+    @include tablet {
+        margin-bottom: 8rem;
+    }
 
     h1 {
         position: sticky;
@@ -7,21 +13,41 @@
         left: 0;
         padding-top: 10rem;
         text-align: center;
+
+        @include tablet {
+            position: static;
+            padding-top: 0;
+            margin-bottom: 2rem;
+        }
     }
 }
 
 .project {
-    height: 100vh;
     display: flex;
+
+    @include tablet {
+        display: block;
+    }
 
     .project-inner {
         display: flex;
+
+        @include tablet {
+            flex-direction: column;
+            background-color: #e4e4e47c;
+            border-radius: .6rem;
+            padding: 2rem;
+        }
     }
 
     .project-image {
         flex: 0 0 50%;
         border-radius: 1rem;
         overflow: hidden;
+
+        @include tablet {
+            padding: 0 2rem 2rem 2rem
+        }
 
         img {
             width: 100%;
@@ -33,6 +59,10 @@
     .project-text {
         flex: 0 0 50%;
         padding: 8rem;
+        
+        @include tablet {
+            padding: 0 4rem;
+        }
 
         h2 {
             font-size: 3.4rem;
@@ -52,6 +82,14 @@
         .actions {
             display: flex;
             gap: 2rem;
+        }
+    }
+
+    .project-text-ordering {
+        order: -1;
+
+        @include tablet {
+            order: unset;
         }
     }
 

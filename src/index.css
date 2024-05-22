@@ -30,7 +30,20 @@ a {
 section {
   height: 100vh;
   scroll-snap-align: center;
+
+  @media screen and (max-width: 1024px) {
+    scroll-snap-align: none;
+    height: 100%;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 6rem;
+    }
+  }
 }
+
+
 
 .btn {
   color: #fff;
