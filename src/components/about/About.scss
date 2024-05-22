@@ -4,6 +4,10 @@
     text-align: center;
     display: flex;
 
+    @include tablet {
+        scroll-margin-top: 8rem;
+    }
+
     .about-inner {
 
         h2 {

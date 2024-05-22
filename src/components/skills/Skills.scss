@@ -3,6 +3,10 @@
 .skills {
     display: flex;
 
+    @include tablet {
+        scroll-margin-top: 10rem;
+    }
+
     .skills-inner {
         display: flex;
         gap: 2rem;
