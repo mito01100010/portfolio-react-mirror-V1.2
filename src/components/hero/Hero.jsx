@@ -17,8 +17,7 @@ const Hero = () => {
             <h1>Hello there,</h1>
 
             <h2>
-              My name is Dimitar
-              I'm into Web Development
+              My name is Dimitar, and I'm into Web Development.
             </h2>
 
             <a href='#about' className='btn'>About me</a>
